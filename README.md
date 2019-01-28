@@ -1,1 +1,3 @@
-# github_practice
+This is my first git push
+:q
+:w
