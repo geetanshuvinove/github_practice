@@ -14,4 +14,5 @@ let me test if i am able to commit or not
 
 Let me do the git repo.
 
+Updated to latest version 2.0.1
 
