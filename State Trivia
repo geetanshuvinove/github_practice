@@ -1,0 +1,53 @@
+<html>
+    <head>
+        STATE TRAVIA
+       <script>
+       function populate(s1,s2){
+           var s1=document.getElementById(s1);
+           var s2=document .getElementById(s2);
+          
+           s1.innerHTML="";
+           if(s1.value=="Haryana"){
+               var optionArray=["Bihar|Bihar","UttarPradesh|UttarPredesh","Chattishgarh"];
+          }
+          for(var option in optionArray){
+              var pair=optionArray[option].split("|");
+              var newOption=document.createElement("option");
+              newOption.value=pair[0];
+              newOption.innerHTML=pair[1];
+             s2.option.add(newOption);
+
+          }
+        }
+
+       </script>
+  </head>
+  <hr/>
+Select you state:
+<body>
+ 
+<select id="select1" name="select1" onclick="populate(s1,s2)">
+<option value=""></option>
+<option value="Haryana">Haryana</option>
+<option value="Bihar">Bihar</option>
+<option value="Uttarpardesh">utttarpardesh</option>
+<option value="Dehradun">Dehradun</option>
+</select>
+<hr/>
+Capital:
+<select id="select2" name ="select2">
+        <option value=""></option>
+        <option value="Chandigarh">Chandigarh</option>
+        <option value="Patna">Patna</option>
+        <option value="Lucknow">Lucknow</option>
+        <option value="Uttrakhand">UttraLkhand</option>
+
+</select>
+<hr/>
+State Flower:
+<input type ="text">
+<hr/>
+State Bird:
+<Input type="text">
+</body>
+</html>
