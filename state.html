@@ -1,0 +1,106 @@
+<html>
+<head>
+        <fieldset>
+           STATE TRIVIA
+    <body> 
+      <div id = "parent">
+<hr/>
+           Select State:
+            <select id="select1" name="select1" >
+            >
+
+                <!-- <option value=""></option>-->
+                <option class=""></option>
+                <option  class = "opt" id= "Haryana" value="Haryana">Haryana</option>
+                <option  class = "opt" id ="Bihar" value="Bihar">Bihar</option>
+                <option  class = "opt" id ="Uttarpardesh" value="Uttarpardesh">utttarpardesh</option>
+                <option  class = "opt"  id="Dehradun" value="Dehradun">Dehradun</option>
+        </select>
+                <hr/>
+                Capital:
+                
+                <select id="select2" name ="select2">
+                       <!-- <option value=""></option>-->
+                    <option class ""></option>
+                            <option  class = 'del1' id ="Chandigarh" value="Chandigarh">Chandigarh</option>
+
+                    
+
+                  
+                            <option class = 'del2'  id="Patna"value="Patna">Patna</option>
+                    
+                      
+                    
+                   
+                            <option  class = 'del3' id="Lucknow" value="Lucknow">Lucknow</option>
+                            <option  class = 'del4' id="Uttrakhand" value="Uttrakhand">Uttrakhand</option>
+
+       
+                </select>
+                <hr/>
+                State Flower:
+                <select id="select3" name="select3">
+                <option id=""></option>
+                <option  id ="Lotus" value="Lotus">Lotus</option>
+                <option  id="Rose"value="Rose">Rose</option>
+                <option  id="Lily" value="Lily">Lily</option>
+                <option  id="Sunflower"value="Sunflower">Sunflower</option>
+
+</select> 
+                <hr/>
+                    State Bird:
+                    <select id="select4" name="select4">
+                  <option id=""></option>
+                  <option  id ="Peacock" value="Peacock">Peacock</option>
+                  <option  id="Hen"value="Hen">Hen</option>
+                  <option  id="Pigeon"value="pigeon">Pigeon</option>
+                  <option  id="Duck"value="Duck">Duck</option>
+                  </select>
+
+
+             <hr/>
+             Admire ON Date:
+             <input type="Text">
+                
+
+
+      </div>  
+   
+
+    </fieldset>
+    
+    <script>
+        let data = {
+    
+        };
+
+
+        let m=new Map();
+        m.set("Haryana","Chandigarh");
+      //  console.log(m.get("Haryana"));
+    m.set('Bihar','Patna');
+    console.log(m.get("Bihar"));
+    m.set("Uttarpardesh","Lucknow");
+    console.log(m.get("Uttarpardesh"));
+    m.set("Dehradun","Uttrakhand");
+    console.log(m.get('Dehradun'));
+    
+        
+       document.querySelector("#parent").addEventListener('change', event=>{
+        e=document.getElementById("select1");
+           console.log(event.target.options[event.target.selectedIndex]);
+           let id = event.target.getAttribute('id');
+           data.value = document.getElementById(`${id}`).value;
+           console.log("value is" + data.value);
+           console.log(id); 
+           let className = event.target.getAttribute('class');
+           console.log(className);
+           console.log(m.get(`${data.value}`));
+            console.log(data);
+          const child = document.getElementById(m.get(`${data.value}`));
+          console.log(m.get(`${data.value}`));
+          localId = m.get(`${data.value}`);
+          console.log(localId);
+          document.getElementById(localId).setAttribute('selected', 'selected');
+          
+          console.log(m);
