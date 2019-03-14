@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mail</title>
+</head>
+<body>
+     <h1><%=msg%></h1><br><br><br>
+    <h1>Send a Message:</h1>
+    <body>
+         
+       
+       <h2>From:</h2>
+       <form action='/send' method="POST" enctype="text/plain">
+        <input type="text"  name="Email" placeholder="Enter Email" name="Title" autocomplete="off" required ><br>
+
+        
+       <h2>To:</h2>
+      <input type="text"  name="Email" placeholder="Enter Email" name="Title" autocomplete="off" required ><br>
+      
+
+      
+      <input type="submit" value="Send">
+     <input type="reset" value="Reset">
+         
+       </form>
+</body>
+</html>
